@@ -2,7 +2,8 @@
 
 # Declare input argument as a variable
 INPUTFILE=$1
-OUTPUTNAME=$INPUTFILE
+OUTPUTNAME=$(echo -n $INPUTFILE | head -c -3)
+# echo $OUTPUTNAME
 
 # Convert markdown to HTML
 pandoc -o $OUTPUTNAME.html $INPUTFILE  
