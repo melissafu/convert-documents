@@ -1,5 +1,4 @@
 
-
 # Declare input argument as a variable
 INPUTFILE=$1
 # OUTPUTNAME=$(echo -n $INPUTFILE | head -c -3)
@@ -19,5 +18,9 @@ pandoc -o $OUTPUTNAME.odt $INPUTFILE
 # Convert markdown to PDF
 pandoc $INPUTFILE --latex-engine pdflatex -o $OUTPUTNAME.pdf
 
+# Convert markdown to RTF
+pandoc $INPUTFILE -o $OUTPUTNAME.rtf
+# ??? -s command
+
 # Make the command line read "Converted INPUT-FILENAME to HTML, DOCX, ODT, PDF
-echo "Converted INPUT-FILENAME to HTML, DOCX, ODT, PDF"
+echo "Converted INPUT-FILENAME to HTML, DOCX, ODT, PDF, RTF"
