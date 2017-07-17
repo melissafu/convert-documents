@@ -16,7 +16,7 @@ pandoc -o $OUTPUTNAME.docx $INPUTFILE
 pandoc -o $OUTPUTNAME.odt $INPUTFILE  
 
 # Convert markdown to PDF
-pandoc $INPUTFILE --latex-engine pdflatex -o $OUTPUTNAME.pdf
+pandoc $INPUTFILE --latex-engine=pdflatex -o $OUTPUTNAME.pdf
 
 # Convert markdown to RTF
 pandoc $INPUTFILE -o $OUTPUTNAME.rtf
